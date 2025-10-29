@@ -36,6 +36,7 @@ public class LeapYear {
                 }
             }
             
+            //Print output - determines leap year or not
             if (isLeapYear) {
                 System.out.println(year + " is a leap year.");
             } else {
