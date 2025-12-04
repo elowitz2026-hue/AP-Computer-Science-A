@@ -147,55 +147,23 @@ public class HPHouseQuiz {
     
     }
     
-    // ADD IN CASE USER DOESN'T CHOOSE CORRECT NUMBERS (Input Validation Method)
+    // Input Validation Method (in case user enters wrong number or input
     
     // Integer field exists on class (not on each instance)
     public static int getValidAnswer(Scanner input) {
-        int ans = 0;
-        boolean valid = false;
-        
-        while (!valid) {
-            System.out.print("Enter 1-4: ");
-            if (input.hasNextInt()); {
+        boolean 
             
+            System.out.println("Invalid number - must be 1, 2, 3, or 4.");
             
+            System.out.println("Invalid input - please enter a number");
             
         }
-    }   
             
-        return ans;
+        // return ;
         
     }
-}
 
 
 
 
 
-/*
-    // =========================
-    // INPUT VALIDATION METHOD
-    // =========================
-    public static int getValidAnswer(Scanner input) {
-        int ans = 0;
-        boolean valid = false;
-
-        while (!valid) {
-            System.out.print("Enter 1–4: ");
-            if (input.hasNextInt()) {
-                ans = input.nextInt();
-                if (ans >= 1 && ans <= 4) {
-                    valid = true;
-                } else {
-                    System.out.println("Invalid number — must be 1, 2, 3, or 4.");
-                }
-            } else {
-                System.out.println("Invalid input — please enter a number.");
-                input.next(); // clear invalid input
-            }
-        }
-        return ans;
-    }
-}
-
-*/
