@@ -31,6 +31,9 @@ public class HPHouseQuiz {
     // House-answer = 1) Gryffindor (1pt); 2) Ravenclaw (2pts); 3) Slytherin (3pts); 4) Hufflepuff (4pts)
     int[] choicePoints = {1, 2, 3, 4};
     
+    // NOTE: possibly alternate questions - 1 HP, then1 realistic or mix & match
+    // Only catch with that is possibly explaining what HP answers mean
+    
     // QUESTION 1
         System.out.println("What do you fear most?");
         System.out.println("1) Being seen as a coward");
@@ -41,11 +44,11 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
         
     // QUESTION 2
-        System.out.println("Which animal do you feel most connected to: ");
-        System.out.println("1) Lion");
-        System.out.println("2) Eagle");
-        System.out.println("3) Snake");
-        System.out.println("4) Badger");
+        System.out.println("Given the choice, would you rather invent a potion that would guarantee you: ");
+        System.out.println("1) Glory?");
+        System.out.println("2) Wisdom?");
+        System.out.println("3) Power?");
+        System.out.println("4) Love?");
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
         
@@ -67,7 +70,7 @@ public class HPHouseQuiz {
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
     
-    // QUESTION 5
+    // QUESTION 5 - possibly change to different question 
         System.out.println("When you work with a team, what's your role?");
         System.out.println("1) The leader who motivates everyone");
         System.out.println("2) The thinker who solves tough problems");
@@ -151,19 +154,31 @@ public class HPHouseQuiz {
     
     // Integer field exists on class (not on each instance)
     public static int getValidAnswer(Scanner input) {
-        boolean 
-            
+        int ans = 0;
+        boolean valid = false;
+        
+        // Since boolean valid = false -> != "not equal to" operator 
+        while (!valid){
+            System.out.println("Enter 1-4: ");
+            // Use Scanner input
+            if (input.hasNextInt()) {
+                ans = input.nextInt();
+                if (ans >= 1 && ans <= 4) {
+                valid = true;
+        } else {
             System.out.println("Invalid number - must be 1, 2, 3, or 4.");
-            
-            System.out.println("Invalid input - please enter a number");
-            
+        } 
+        } else {
+            System.out.println("Invalid input - please enter a number"); 
+            input.next(); // Clear invalid input
         }
             
-        // return ;
+        }
         
+        return ans;
+        
+        }
+    
     }
 
-
-
-
-
+        
