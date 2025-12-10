@@ -23,9 +23,9 @@ public class HPHouseQuiz {
     
  
     System.out.println("WELCOME TO THE HARRY POTTER HOUSE SORTING QUIZ!");
-    System.out.println("For each question, choose an answer 1-4.");
-    System.out.println("Each choice is worth a different number of points.");
-    System.out.println("Your points will be tallied up at the end to determine where you will be sorted.\n");
+    System.out.println("    - For each of the following 10 questions, choose an answer 1-4.");
+    System.out.println("    - Each choice is worth a different number of points.");
+    System.out.println("    - Your points will be tallied up at the end to determine where you will be \n      sorted in either: Hufflepuff, Ravenclaw, Gryffindor, or Slytherin.\n");
     
     
     // Mapping -> points
