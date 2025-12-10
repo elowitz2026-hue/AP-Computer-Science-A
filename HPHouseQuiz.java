@@ -33,7 +33,7 @@ public class HPHouseQuiz {
     int[] choicePoints = {1, 2, 3, 4};
     
     // QUESTION 1
-        System.out.println("What do you fear most?");
+        System.out.println("QUESTION 1: What do you fear most?");
         System.out.println("1) Being seen as a coward");
         System.out.println("2) Being ignorant or wrong");
         System.out.println("3) Being powerless or overlooked");
@@ -42,7 +42,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
         
     // QUESTION 2
-        System.out.println("\nHow do you usually solve a problem");
+        System.out.println("\nQUESTION 2: How do you usually solve a problem?");
         System.out.println("1) Jump in & take action");
         System.out.println("2) Think it through logically");
         System.out.println("3) Find the most strategic advantage");
@@ -51,7 +51,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];    
         
     // QUESTION 3
-        System.out.println("\nGiven the choice, would you rather invent a potion that would guarantee you: ");
+        System.out.println("\nQUESTION 3: Given the choice, would you rather \ninvent a potion that would guarantee you: ");
         System.out.println("1) Glory?");
         System.out.println("2) Wisdom?");
         System.out.println("3) Power?");
@@ -60,7 +60,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
         
     // QUESTION 4
-        System.out.println("\nWhich quality matters most to you in a friend?");
+        System.out.println("\nQUESTION 4: Which quality matters most to you in a friend?");
         System.out.println("1) Courage & honesty");
         System.out.println("2) Intelligence & curiosity");
         System.out.println("3) Ambition & confidence");
@@ -69,7 +69,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
         
     // QUESTION 5
-        System.out.println("\nWhat type of social events do you prefer?");
+        System.out.println("\nQUESTION 5: What type of social events do you prefer?");
         System.out.println("1) Big, active outings");
         System.out.println("2) Quiet hangouts");
         System.out.println("3) Exclusive or high-profile gatherings");
@@ -78,7 +78,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];        
         
     // QUESTION 6
-        System.out.println("\nWhat type of classes interest you the most?");
+        System.out.println("\nQUESTION 6: What type of classes interest you the most?");
         System.out.println("1) Defense Against the Dark Arts");
         System.out.println("2) Charms or Ancient Runes");
         System.out.println("3) Potions");
@@ -87,7 +87,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
     
     // QUESTION 7
-        System.out.println("\nHow do you react to unexpected changes?");
+        System.out.println("\nQUESTION 7: How do you react to unexpected changes?");
         System.out.println("1) Adapt quickly & improvise");
         System.out.println("2) Pause & evaluate the new structure");
         System.out.println("3) See how to turn it into your advantage");
@@ -96,7 +96,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
     
     // QUESTION 8
-        System.out.println("\nWhat's your ideal learning environment?");
+        System.out.println("\nQUESTION 8: What's your ideal learning environment?");
         System.out.println("1) Hand's-on experiences");
         System.out.println("2) Quiet, focused settings");
         System.out.println("3) Competitive or high-achieving spaces");
@@ -105,7 +105,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
     
     // QUESTION 9
-        System.out.println("\nIf you stumbled on a secret passageway, what would you do?");
+        System.out.println("\nQUESTION 9: If you stumbled on a secret passageway, what would you do?");
         System.out.println("1) Explore it immediately without hesitation");
         System.out.println("2) Inspect it first to see if it's safe");
         System.out.println("3) Keep it a secret & use it strategically when it benefits you");
@@ -114,7 +114,7 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
     
     // QUESTION 10
-        System.out.println("\nWhat hobby sounds most appealing?");
+        System.out.println("\nQUESTION 10: What hobby sounds most appealing?");
         System.out.println("1) Traveling or exploring");
         System.out.println("2) Reading, solving puzzles, creative thinking"); // Creative thinking -> play an instrument
         System.out.println("3) Self-development or money-making projects"); // Money-making -> poker?
