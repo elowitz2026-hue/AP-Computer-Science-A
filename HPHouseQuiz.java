@@ -39,7 +39,7 @@ public class HPHouseQuiz {
         System.out.println("3) Being powerless or overlooked");
         System.out.println("4) Being alone or disliked");
         answer = getValidAnswer(input);
-        totalPoints += choicePoints[answer - 1];
+        totalPoints += choicePoints[answer - 1]; // Increases the value of the variable by the value after +=
         
     // QUESTION 2
         System.out.println("\nQUESTION 2: How do you usually solve a problem?");
@@ -131,6 +131,7 @@ public class HPHouseQuiz {
     
     // Note: else if needs condition, else is deafult
     
+    // Point ranges 
     if (totalPoints >= 10 && totalPoints <= 17) {
         house = "Gryffindor";
     } else if (totalPoints >= 18 && totalPoints <= 24) {
@@ -147,7 +148,7 @@ public class HPHouseQuiz {
     
     }
     
-    // Input Validation Method (in case user enters wrong number or input
+    // Input Validation Method (in case user enters wrong number or input)
     
     // Integer field exists on class (not on each instance)
     public static int getValidAnswer(Scanner input) {
