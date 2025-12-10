@@ -17,12 +17,13 @@ public class HPHouseQuiz {
         
     Scanner input = new Scanner(System.in);
     
+    // Set total points based on answers at 0 -> added up later
     int totalPoints = 0;
     int answer = 0;    
     
  
     System.out.println("WELCOME TO THE HARRY POTTER HOUSE SORTING QUIZ!");
-    System.out.println("For each question, choose 1-4.");
+    System.out.println("For each question, choose an answer 1-4.");
     System.out.println("Each choice is worth a different number of points.");
     System.out.println("Your points will be tallied up at the end to determine where you will be sorted.\n");
     
@@ -30,9 +31,6 @@ public class HPHouseQuiz {
     // Mapping -> points
     // House-answer = 1) Gryffindor (1pt); 2) Ravenclaw (2pts); 3) Slytherin (3pts); 4) Hufflepuff (4pts)
     int[] choicePoints = {1, 2, 3, 4};
-    
-    // NOTE: possibly alternate questions - 1 HP, then1 realistic or mix & match
-    // Only catch with that is possibly explaining what HP answers mean
     
     // QUESTION 1
         System.out.println("What do you fear most?");
@@ -44,7 +42,16 @@ public class HPHouseQuiz {
         totalPoints += choicePoints[answer - 1];
         
     // QUESTION 2
-        System.out.println("Given the choice, would you rather invent a potion that would guarantee you: ");
+        System.out.println("\nHow do you usually solve a problem");
+        System.out.println("1) Jump in & take action");
+        System.out.println("2) Think it through logically");
+        System.out.println("3) Find the most strategic advantage");
+        System.out.println("4) Ask for help & work together");
+        answer = getValidAnswer(input);
+        totalPoints += choicePoints[answer - 1];    
+        
+    // QUESTION 3
+        System.out.println("\nGiven the choice, would you rather invent a potion that would guarantee you: ");
         System.out.println("1) Glory?");
         System.out.println("2) Wisdom?");
         System.out.println("3) Power?");
@@ -52,17 +59,26 @@ public class HPHouseQuiz {
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
         
-    // QUESTION 3
-        System.out.println("How do you usually solve a problem");
-        System.out.println("1) Jump in & take action");
-        System.out.println("2) Think it through logically");
-        System.out.println("3) Find the most strategic advantage");
-        System.out.println("4) Ask for help & work together");
+    // QUESTION 4
+        System.out.println("\nWhich quality matters most to you in a friend?");
+        System.out.println("1) Courage & honesty");
+        System.out.println("2) Intelligence & curiosity");
+        System.out.println("3) Ambition & confidence");
+        System.out.println("4) Kindness & loyalty");
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
         
-    // QUESTION 4
-        System.out.println("What type of classes interest you the most?");
+    // QUESTION 5
+        System.out.println("\nWhat type of social events do you prefer?");
+        System.out.println("1) Big, active outings");
+        System.out.println("2) Quiet hangouts");
+        System.out.println("3) Exclusive or high-profile gatherings");
+        System.out.println("4) Cozy get-togethers with family/friends");
+        answer = getValidAnswer(input);
+        totalPoints += choicePoints[answer - 1];        
+        
+    // QUESTION 6
+        System.out.println("\nWhat type of classes interest you the most?");
         System.out.println("1) Defense Against the Dark Arts");
         System.out.println("2) Charms or Ancient Runes");
         System.out.println("3) Potions");
@@ -70,35 +86,8 @@ public class HPHouseQuiz {
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
     
-    // QUESTION 5 - possibly change to different question 
-        System.out.println("When you work with a team, what's your role?");
-        System.out.println("1) The leader who motivates everyone");
-        System.out.println("2) The thinker who solves tough problems");
-        System.out.println("3) The strategist who plans the route");
-        System.out.println("4) The supporter who ensures everyone is okay");
-        answer = getValidAnswer(input);
-        totalPoints += choicePoints[answer - 1];
-    
-    // QUESTION 6
-        System.out.println("How do you make decisions?");
-        System.out.println("1) Go with your gut");
-        System.out.println("2) Analyze all the details");
-        System.out.println("3) Think about how it benefits your future");
-        System.out.println("4) Consider how it affects others");
-        answer = getValidAnswer(input);
-        totalPoints += choicePoints[answer - 1];
-    
     // QUESTION 7
-        System.out.println("What type of social events do you prefer?");
-        System.out.println("1) Big, active outings");
-        System.out.println("2) Quiet hangouts");
-        System.out.println("3) Exclusive or high-profile gatherings");
-        System.out.println("4) Cozy get-togethers with family/friends");
-        answer = getValidAnswer(input);
-        totalPoints += choicePoints[answer - 1];
-    
-    // QUESTION 8
-        System.out.println("How do you react to unexpected changes?");
+        System.out.println("\nHow do you react to unexpected changes?");
         System.out.println("1) Adapt quickly & improvise");
         System.out.println("2) Pause & evaluate the new structure");
         System.out.println("3) See how to turn it into your advantage");
@@ -106,8 +95,8 @@ public class HPHouseQuiz {
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
     
-    // QUESTION 9
-        System.out.println("What's your ideal learning environment?");
+    // QUESTION 8
+        System.out.println("\nWhat's your ideal learning environment?");
         System.out.println("1) Hand's-on experiences");
         System.out.println("2) Quiet, focused settings");
         System.out.println("3) Competitive or high-achieving spaces");
@@ -115,20 +104,28 @@ public class HPHouseQuiz {
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
     
+    // QUESTION 9
+        System.out.println("\nIf you stumbled on a secret passageway, what would you do?");
+        System.out.println("1) Explore it immediately without hesitation");
+        System.out.println("2) Inspect it first to see if it's safe");
+        System.out.println("3) Keep it a secret & use it strategically when it benefits you");
+        System.out.println("4) Tell somebody before proceeding");
+        answer = getValidAnswer(input);
+        totalPoints += choicePoints[answer - 1];
+    
     // QUESTION 10
-        System.out.println("What hobby sounds most appealing?");
+        System.out.println("\nWhat hobby sounds most appealing?");
         System.out.println("1) Traveling or exploring");
-        System.out.println("2) Reading, puzzles, creative thinking");
-        System.out.println("3) Self-development or money-making projects");
+        System.out.println("2) Reading, solving puzzles, creative thinking"); // Creative thinking -> play an instrument
+        System.out.println("3) Self-development or money-making projects"); // Money-making -> poker?
         System.out.println("4) Cooking, gardening, crafting");
         answer = getValidAnswer(input);
         totalPoints += choicePoints[answer - 1];
     
     
-    // Determine House based on total points
-    
-    // Point range: Gryffindor - 10-17; Ravenclaw - 18-24; Slytherin - 25-32; Hufflepuff - 33-40;
-    // NOTE: since 30 is not divisible by 4, Ravenclaw has 1 pt less chance than the other 3 houses
+    /* Determine House based on total points
+       Point range: Gryffindor - 10-17; Ravenclaw - 18-24; Slytherin - 25-32; Hufflepuff - 33-40;
+       NOTE: since 30 is not divisible by 4, Ravenclaw has 1 pt less chance than the other 3 houses */
     
     String house;
     
