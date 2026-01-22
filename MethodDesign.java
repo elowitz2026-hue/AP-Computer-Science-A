@@ -32,6 +32,9 @@ public class MethodDesign {
        System.out.println(st1);
        System.out.println();
        System.out.println(st2);
+       
+    // NOTE: modified driver class to allow for adding more students + getting their scores
+        // That's why there are 2 added students
     }
 }
 
